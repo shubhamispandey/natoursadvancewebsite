@@ -272,6 +272,10 @@ body {
         color: #fff; }
         .menu-toggle-nav ul li a span {
           margin-right: 2rem; }
+  @media (max-width: 37.5em) {
+    .menu-toggle-nav ul {
+      width: 100%;
+      top: 55%; } }
 
 input:checked ~ .menu-toggle__background {
   transform: scale(100); }
@@ -826,7 +830,8 @@ input:checked ~ .menu-toggle__btn span::after {
   z-index: 100000;
   opacity: 0;
   visibility: hidden;
-  transition: all 0.5s; }
+  transition: all 0.5s;
+  /* ------------------- MEDIA QUERY ---------------------- */ }
   .popup__content {
     width: 75%;
     position: absolute;
@@ -876,6 +881,48 @@ input:checked ~ .menu-toggle__btn span::after {
   .popup:target .popup__content {
     transform: translate(-50%, -50%) scale(1);
     opacity: 1; }
+  @media (max-width: 2000px) {
+    .popup__content-right p {
+      font-size: 1.9rem; } }
+  @media (max-width: 1640px) {
+    .popup__content-right p {
+      font-size: 1.5rem; } }
+  @media (max-width: 1440px) {
+    .popup__content-right {
+      padding: 2rem; }
+      .popup__content-right p {
+        font-size: 1.3rem; } }
+  @media (max-width: 1260px) {
+    .popup__content-right {
+      padding: 3rem; }
+      .popup__content-right p {
+        font-size: 1.6rem;
+        line-height: 2rem;
+        column-count: 1;
+        text-align: justify;
+        margin-bottom: 0; } }
+  @media (max-width: 1000px) {
+    .popup__content-right {
+      padding: 3rem; }
+      .popup__content-right p {
+        display: none; } }
+  @media (max-width: 640px) {
+    .popup__content {
+      display: inline-block; }
+      .popup__content-left {
+        display: table;
+        width: 100%; }
+        .popup__content-left img {
+          display: table-cell;
+          float: left;
+          width: 50%; }
+      .popup__content-right {
+        padding: 3rem;
+        float: none;
+        display: block;
+        width: 100%; }
+        .popup__content-right p {
+          display: none; } }
 
 .row {
   max-width: 114rem;
@@ -886,7 +933,7 @@ input:checked ~ .menu-toggle__btn span::after {
       padding: 3rem; } }
   @media (max-width: 56.25em) {
     .row {
-      max-width: 50rem;
+      max-width: 60rem;
       padding: 2rem; } }
   .row:not(:last-child) {
     margin-bottom: 8rem; }
@@ -1017,7 +1064,7 @@ input:checked ~ .menu-toggle__btn span::after {
               padding: 0.6rem;
               margin-right: 2rem; }
               .footer .navigation nav ul li:hover {
-                transform: rotate(0deg) scale(1.05) translateX(1rem);
+                transform: rotate(0deg) scale(1.05) translateX(0rem);
                 box-shadow: none; }
               .footer .navigation nav ul li a:hover {
                 color: rgba(85, 197, 122, 0.5); } }
@@ -1104,6 +1151,9 @@ input:checked ~ .menu-toggle__btn span::after {
   margin-top: -13rem; }
   .section-features > * {
     transform: skewY(8deg); }
+  @media (max-width: 37.5em) {
+    .section-features {
+      padding: 10rem 0; } }
 
 /* ---------------------- section-cards -----------------------*/
 .section-cards {
@@ -1151,3 +1201,6 @@ input:checked ~ .menu-toggle__btn span::after {
     .section-booking__container {
       background-image: linear-gradient(rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0.9)), url(../img/nat-10.jpg);
       padding: 3rem; } }
+  @media (max-width: 37.5em) {
+    .section-booking {
+      padding: 5rem 0; } }
