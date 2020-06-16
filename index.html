@@ -52,7 +52,7 @@
 
     <main>
         <section class="section-about">
-            <div class="u-center u-margin-bottom-big">
+            <div class="u-center">
                 <h2 class="heading-secondary">
                     Exciting tours for adventurous people
                 </h2>
@@ -78,9 +78,30 @@
                 </div>
                 <div class="col-1-of-2">
                     <div class="composition">
+
+                        <img 
+                        srcset="img/nat-1-large.jpg 1000w,img/nat-1.jpg 300w" 
+                        alt=""
+                        sizes="  (max-width:1200px) 1000px, (max-width:900px) 25vw , (max-width:600px) 30vw , 300px " 
+                        class="composition__photo composition__photo--p1" >
+
+                        <img 
+                        srcset="img/nat-2-large.jpg 1000w,img/nat-2.jpg 300w" 
+                        alt=""
+                        sizes="  (max-width:1200px) 1000px, (max-width:900px) 25vw , (max-width:600px) 30vw , 300px " 
+                        class="composition__photo composition__photo--p2" >
+
+                        <img 
+                        srcset="img/nat-3-large.jpg 1000w,img/nat-3.jpg 300w" 
+                        alt=""
+                        sizes="  (max-width:1200px) 1000px, (max-width:900px) 25vw , (max-width:600px) 30vw , 300px " 
+                        class="composition__photo composition__photo--p3" >
+                        
+                        <!--
                         <img src="img/nat-1-large.jpg" alt="" class="composition__photo composition__photo--p1">
                         <img src="img/nat-2-large.jpg" alt="" class="composition__photo composition__photo--p2">
                         <img src="img/nat-3-large.jpg" alt="" class="composition__photo composition__photo--p3">
+                        -->
                     </div>
                 </div>
             </div>
@@ -268,7 +289,7 @@
                 </video>
             </div>
 
-            <div class="u-center u-margin-bottom-big u-margin-top-medium">
+            <div class="u-center u-margin-top-medium">
                 <h2 class="heading-secondary">
                     WE MAKE PEOPLE GENUINELY HAPPY
                 </h2>
@@ -276,7 +297,7 @@
             <div class="row">
                 <div class="story">
                     <figure class="story__shape">
-                        <img src="img/nat-8.jpg" alt="" class="story__image">
+                            <img src="img/nat-8.jpg" alt="" class="story__image">
                         <figcaption class="story__caption">Alisa Madrin</figcaption>
                     </figure>
                     <div class="story__text">
@@ -307,7 +328,7 @@
                     </div>
                 </div>
             </div>
-            <div class="u-margin-top-big u-center" style="font-size: 18px;">
+            <div class="u-center" style="font-size: 18px;">
                 <a href="#" class="btn-text u-margin-top-Vbig">Read all Stories <i class="fas fa-arrow-right"></i></a>
             </div>
 
@@ -354,7 +375,11 @@
 
     <footer class="footer">
         <div class="footer__logo-box">
-            <img src="img/logo-green-1x.png" alt="" class="footer__logo">
+            <picture>
+                <source srcset="img/logo-green-small-2x.png 2x, img/logo-green-small-1x.png 1x"
+                    media="(max-width: 37.5em)">
+                <img srcset="img/logo-green-2x.png 2x, img/logo-green-1x.png 1x" alt="" class="footer__logo">
+            </picture>
         </div>
         <div class="row">
             <div class="col-1-of-2">
@@ -372,7 +397,8 @@
             </div>
             <div class="col-1-of-2">
                 <div class="footer__text">
-                    All rights reserved <i class="far fa-copyright"></i> . Created by <a href="">Shubham Pandey</a> as a part of css practice with advanced css design. This is my favourite flat design for this website
+                    All rights reserved <i class="far fa-copyright"></i> . Created by <a href="">Shubham Pandey</a> as a
+                    part of css practice with advanced css design. This is my favourite flat design for this website
                 </div>
             </div>
         </div>
@@ -386,7 +412,7 @@
                 <img src="img/nat-9.jpg" alt="">
             </div>
             <div class="popup__content-right">
-                <a href="#section-cards" class="close" > &#10006; </a>
+                <a href="#section-cards" class="close"> &#10006; </a>
                 <div class="u-margin-bottom-small">
                     <h2 class="heading-secondary">
                         START BOOKING NOW
@@ -396,11 +422,15 @@
                     you are going to love the nature
                 </h3>
                 <p class="paragraph">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Sed sed risus pretium quam. Aliquam sem et tortor consequat id. Volutpat odio facilisis mauris sit amet massa
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna
+                    aliqua. Sed sed risus pretium quam. Aliquam sem et tortor consequat id. Volutpat odio facilisis
+                    mauris sit amet massa
                     vitae. Mi dignissim enim sit. quis lectus
-                    nulla at volutpat diam ut venenatis. Malesuada pellentesque elit eget gravida cum Placerat orci nulla pellentesque dignissim enim sit. Vitae semper quis lectus
-                    nulla at volutpat diam ut venenatis. Malesuada pellentesque elit eget gravida cum congue. Placerat orci nulla pellentesque dignissim enim sit. pretium quam
+                    nulla at volutpat diam ut venenatis. Malesuada pellentesque elit eget gravida cum Placerat orci
+                    nulla pellentesque dignissim enim sit. Vitae semper quis lectus
+                    nulla at volutpat diam ut venenatis. Malesuada pellentesque elit eget gravida cum congue. Placerat
+                    orci nulla pellentesque dignissim enim sit. pretium quam
                 </p>
                 <a href="#" class="btn btn--green">book now</a>
             </div>
