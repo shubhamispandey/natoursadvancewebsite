@@ -1,0 +1,196 @@
+.menu-toggle {
+
+    input {
+        display: none;
+    }
+
+    &__background {
+        width: 6rem;
+        height: 6rem;
+        background-image: radial-gradient($color-primary, $color-primary-light);
+        border-radius: 50%;
+        position: fixed;
+        top: 6.5rem;
+        right: 6.5rem;
+        z-index: 10000;
+        transition: all 0.6s cubic-bezier(0.85, 0, 0.15, 1);
+
+        @include respond(tablet-port) {
+            top: 3.5rem;
+            right: 3.5rem;
+        }
+    }
+
+    &__btn {
+        width: 7rem;
+        height: 7rem;
+        background-color: $color-white;
+        border-radius: 50%;
+        position: fixed;
+        top: 6rem;
+        right: 6rem;
+        z-index: 20000;
+        box-shadow: 0 1rem 2rem rgba($color-black, 0.3);
+        cursor: pointer;
+
+        @include respond(tablet-port) {
+            top: 3rem;
+            right: 3rem;
+        }
+
+        span {
+            display: inline-block;
+            width: 4rem;
+            height: 0.5rem;
+            border-radius: 10px;
+            background-color: $color-dark-grey;
+            z-index: 25000;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            transition: 0.2s;
+
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: -1rem;
+                width: 4rem;
+                height: 0.5rem;
+                border-radius: 10px;
+                background-color: $color-dark-grey;
+                transition: all 0.2s ease-out;
+            }
+
+            &::after {
+                content: "";
+                position: absolute;
+                top: 1rem;
+                width: 4rem;
+                height: 0.5rem;
+                border-radius: 10px;
+                background-color: $color-dark-grey;
+                transition: all 0.2s ease-out;
+            }
+        }
+
+        &:hover span::after {
+            top: 1.2rem;
+        }
+
+        &:hover span::before {
+            top: -1.2rem;
+        }
+
+        /*
+        .a{
+            display: inline-block;
+            width: 4rem;
+            height: 0.5rem;
+            border-radius: 10px;
+            background-color: $color-dark-grey;
+            z-index: 25000;
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%,-50%);
+
+            &a{
+                top: 35%;
+            }
+            &b {
+                top: 50%;
+            }
+            &c {
+                top: 65%;
+            }
+        }
+        */
+    }
+
+    &-nav {
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+        z-index: 15000;
+        transition: all 0.6s ease-out;
+        transform: translateX(300%);
+
+        ul {
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+
+            li {
+                display: block;
+                list-style: none;
+                font-size: 3rem;
+                font-weight: 300;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                padding: 1.5rem 2.5rem;
+                margin: 1.5rem;
+                transition: all 0.4s;
+                background-image: linear-gradient(120deg, transparent 0%, transparent 50%, $color-white 50%);
+                background-size: 220%;
+
+                &:hover {
+                    background-position: 100%;
+                    transform: translateX(4rem);
+                }
+
+                &:hover a {
+                    color: $color-primary;
+                }
+
+                a {
+                    text-decoration: none;
+                    color: $color-white;
+
+                    span {
+                        margin-right: 2rem;
+                    }
+
+                }
+            }
+        }
+
+        @include respond(phone) {
+            ul {
+                width: 100%;
+                top: 55%;
+            }
+        }
+    }
+
+
+    //functionality
+
+    input:checked~&__background {
+        transform: scale(100);
+    }
+
+    input:checked~&-nav {
+        transform: translateX(0%);
+    }
+
+    input:checked~&__btn span {
+        width: 0;
+        left: 20%;
+    }
+
+    input:checked~&__btn span::before {
+        transform-origin: center;
+        transform: rotate(135deg);
+        top: 0;
+    }
+
+    input:checked~&__btn span::after {
+        transform-origin: center;
+        transform: rotate(-135deg);
+        top: 0;
+    }
+
+}

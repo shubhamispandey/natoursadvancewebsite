@@ -5,6 +5,7 @@
     transform: translate(-50%, -50%);
     text-transform: uppercase;
     text-align: center;
+    -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
 
     &--main {
@@ -12,8 +13,27 @@
         font-size: 6rem;
         font-weight: 400;
         letter-spacing: 3.5rem;
+        -webkit-animation: moveInLeft 1s ease-in-out;
         animation: moveInLeft 1s ease-in-out;
+        -webkit-animation-fill-mode: backwards;
         animation-fill-mode: backwards;
+
+        @include respond(tablet-port) {
+            font-size: 8rem;
+        }
+
+        @include respond(phone) {
+            font-size: 4rem;
+            font-weight: 700;
+            letter-spacing: 2.5rem;
+        }
+
+        @include respond(phone-small) {
+            font-size: 4rem;
+            font-weight: 700;
+            letter-spacing: 2rem;
+            transform: translateX(1rem);
+        }
     }
 
     &--sub {
@@ -22,26 +42,67 @@
         font-size: 2rem;
         font-weight: 700;
         letter-spacing: 1.67rem;
+        -webkit-animation: moveInRight 1s ease-in-out;
         animation: moveInRight 1s ease-in-out;
+        -webkit-animation-fill-mode: backwards;
         animation-fill-mode: backwards;
+
+        @include respond(phone) {
+            font-size: 1.5rem;
+            font-weight: 400;
+            letter-spacing: 1.12rem;
+        }
+
+        @include respond(phone-small) {
+            font-size: 1.5rem;
+            font-weight: 400;
+            letter-spacing: 0.9rem;
+        }
+    }
+
+    @include respond(phone) {
+        top: 50%;
     }
 }
 
 /* ---------------------- section-about -----------------------*/
 
-.section-about{
+.section-about {
     margin-top: -20vh;
     padding: 20rem 0 25rem;
     background-color: $color-light-grey-1;
+
+    .u-center {
+        margin-bottom: 8rem;
+    }
+
+    a {
+        font-size: 2rem;
+    }
+
+    @media only screen and (max-width:75rem) ,
+            only screen and (hover:none) {
+        padding: 30rem 0 25rem;
+    }
+
+
+    @include respond(phone) {
+        padding: 20rem 0 25rem;
+
+        .u-center {
+            margin-bottom: 4rem;
+        }
+    }
+    
 }
 
 
 /* ---------------------- section-features -----------------------*/
 
-.section-features{
+.section-features {
     padding: 20rem 0;
     background-image: linear-gradient(to bottom right, rgba($color-primary-light, 0.8), rgba($color-primary-dark, 0.8)),
-    url(../img/nat-4.jpg);
+        url(../img/nat-4.jpg);
 
     background-size: cover;
     background-position: top;
@@ -50,25 +111,87 @@
     transform: skewY(-8deg);
     margin-top: -13rem;
 
-    & > *{
+    &>* {
         transform: skewY(8deg);
+    }
+
+    @include respond(phone) {
+        padding: 10rem 0;
+    }
+
+    @media (-webkit-max-device-pixel-ratio: 2) and (max-width: 900px),
+    (max-resolution: 192dpi) and (max-width: 900px) {
+        background-image:
+            linear-gradient(to bottom right, rgba($color-primary-light, 0.8),
+                rgba($color-primary-dark, 0.8)),
+            url(../img/nat-4-small.jpg);
     }
 }
 
 /* ---------------------- section-cards -----------------------*/
 
-.section-cards{
+.section-cards {
     margin-top: -10rem;
     padding: 20rem 0 10rem;
     background-color: $color-light-grey-1;
+
+    .u-center {
+        @include respond(tablet-port) {
+            margin-bottom: 3rem;
+        }
+    }
+
+    @include respond(tablet-port) {
+        padding: 30rem 0 5rem;
+    }
+
+    .u-center {
+        @include respond(tablet-port) {
+            margin-top: -7rem
+        }
+    }
+    @include respond(phone) {
+        padding: 27rem 0 5rem;
+    }
+    @include respond(phone-small){
+        padding: 25rem 0 5rem;
+    }
+
 }
 
 /* ---------------------- section-stories -----------------------*/
 
-.section-stories{
+.section-stories {
     position: relative;
-    padding: 10rem 0 10rem;
-    background-color: rgba($color-black , 0.6);
+    padding: 8rem 0 10rem;
+    background-color: rgba($color-black, 0.6);
+
+    .u-center {
+        margin-top: 0rem;
+        margin-bottom: 5rem;
+    }
+
+    @include respond(tablet-land) {
+        position: relative;
+        padding: 4rem 0 5rem;
+        background-color: rgba($color-black, 0.6);
+
+        .u-center {
+            margin-top: 4rem;
+            margin-bottom: 3rem;
+        }
+    }
+
+    @include respond(phone) {
+        position: relative;
+        padding: 2rem 0 5rem;
+        background-color: rgba($color-black, 0.6);
+
+        .u-center {
+            margin-top: 4rem;
+            margin-bottom: 3rem;
+        }
+    }
 }
 
 /* ---------------------- section-booking -----------------------*/
@@ -76,14 +199,35 @@
 .section-booking {
     padding: 15rem 0;
     background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
+    background-repeat: no-repeat;
+    background-size: cover;
 
     &__container {
-        background-image: linear-gradient(105deg, rgba($color-white, 0.9) 0%, rgba($color-white, 0.9) 50%, transparent 50% )
-        ,url(../img/nat-10.jpg);
+        background-image: linear-gradient(105deg, rgba($color-white, 0.9) 0%, rgba($color-white, 0.9) 50%, transparent 50%), url(../img/nat-10.jpg);
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
         padding: 6rem;
         box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.2);
+    }
+
+    @include respond(tablet-port) {
+        &__container {
+            background-image: linear-gradient(rgba($color-white, 0.7) 0%, rgba($color-white, 0.9)),
+                url(../img/nat-10.jpg);
+            padding: 3rem;
+        }
+    }
+
+    @include respond(phone) {
+        padding: 5rem 0;
+    }
+
+    @media (-webkit-max-device-pixel-ratio: 2) and (max-width: 900px),
+    (max-resolution: 192dpi) and (max-width: 900px) {
+        background-image:
+            linear-gradient(to bottom right, rgba($color-primary-light, 0.8),
+                rgba($color-primary-dark, 0.8)),
+            url(../img/nat-10-small.jpg);
     }
 }

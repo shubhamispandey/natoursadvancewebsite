@@ -1,0 +1,21 @@
+/* 
+0-600px - phone
+600-900px - tablet-portrait
+1200-1800 - Desktop
+1800+ - Big Desktop
+
+1em = 16px  
+
+In media queries ems and rems are taken from the browser
+default and not what the user defines , so here 1rem is
+not 10px which we defined here in body
+
+breakpoint- argument choice
+
+phone
+tablet-port
+tablet-land
+big-desktop
+
+*/
+/*# sourceMappingURL=mixins.css.map */

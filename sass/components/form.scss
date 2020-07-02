@@ -1,0 +1,249 @@
+.form {
+    width: 50%;
+    font-family: 'Lato', sans-serif;
+    color: $color-light-grey;
+
+    &-group:not(:last-child) {
+        margin-bottom: 2rem;
+    }
+
+    &-input {
+        padding: 1.5rem 2rem;
+        display: block;
+        width: 80%;
+        color: inherit;
+        font-family: 'Lato', sans-serif;
+        font-size: 1.5rem;
+        font-weight: 400;
+        border-radius: 3px;
+        outline: none;
+        border: none;
+        border-bottom: 3px solid transparent;
+        z-index: 50;
+        transition: all 0.5s;
+
+        &:focus:invalid {
+            border-bottom: 3px solid $color-secondary-dark;
+        }
+
+        &:focus {
+            border-bottom: 3px solid $color-primary;
+            box-shadow: 0.5rem 0.5rem 1rem rgba($color-light-grey-2, 0.9),
+                -0.5rem -0.5rem 1rem rgba($color-light-grey-2, 0.9);
+        }
+
+    }
+
+    &-label {
+        margin-left: 2rem;
+        display: block;
+        font-size: 1.4rem;
+        margin-top: 0.5rem;
+        transition: all 0.5s;
+        z-index: 49;
+    }
+
+    &-input::-webkit-input-placeholder {
+        color: rgb(158, 158, 158);
+    }
+
+    &-input::-moz-placeholder {
+        color: rgb(158, 158, 158);
+    }
+
+    &-input:-ms-input-placeholder {
+        color: rgb(158, 158, 158);
+    }
+
+    &-input::-ms-input-placeholder {
+        color: rgb(158, 158, 158);
+    }
+
+    &-input::placeholder {
+        color: rgb(158, 158, 158);
+    }
+
+    &-input:placeholder-shown+&-label {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-4rem);
+    }
+
+    // radio
+
+    &-group-radio {
+        width: 49%;
+        display: inline-block;
+
+        .form-radio {
+            display: none;
+        }
+
+        .form-radio:checked~.form-custom-radio::after {
+            opacity: 1;
+        }
+
+        .form-radio-label {
+            margin-left: 1rem;
+            cursor: pointer;
+            font-size: 1.5rem;
+        }
+
+        .form-custom-radio {
+            width: 3rem;
+            height: 3rem;
+            border: 0.4rem solid $color-primary;
+            background-color: transparent;
+            border-radius: 50%;
+            display: inline-block;
+            position: relative;
+            top: 1rem;
+
+
+
+            &::after {
+                content: "";
+                display: inline-block;
+                position: absolute;
+                width: 1.3rem;
+                height: 1.3rem;
+                border-radius: 50%;
+                background-color: $color-primary;
+                top: 50%;
+                left: 50%;
+                opacity: 0;
+                transform: translate(-50%, -50%);
+                transition: all 0.3s;
+            }
+        }
+    }
+
+
+    //media queries
+
+    @include respond(phone-small) {
+        &-group-radio {
+            .form-radio-label {
+                font-size: 1.3rem;
+            }
+        }
+    }
+
+    @include respond(tablet-port) {
+        width: 100%;
+
+        &-group:not(:last-child) {
+            margin-bottom: 1.5rem;
+        }
+
+        &-input {
+            padding: 1.5rem 2rem;
+            display: block;
+            width: 100%;
+            color: inherit;
+            font-family: 'Lato', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 400;
+            border-radius: 3px;
+            outline: none;
+            border: none;
+            border-bottom: 3px solid transparent;
+            z-index: 50;
+            transition: all 0.5s;
+
+            &:focus:invalid {
+                border-bottom: 3px solid $color-secondary-dark;
+            }
+
+            &:focus {
+                border-bottom: 3px solid $color-primary;
+                box-shadow: 0.5rem 0.5rem 1rem rgba($color-light-grey-2, 0.9),
+                    -0.5rem -0.5rem 1rem rgba($color-light-grey-2, 0.9);
+            }
+
+        }
+
+        &-label {
+            margin-left: 2rem;
+            display: block;
+            font-size: 1.4rem;
+            margin-top: 0.5rem;
+            transition: all 0.5s;
+            z-index: 49;
+        }
+
+        &-input::-webkit-input-placeholder {
+            color: rgb(158, 158, 158);
+        }
+
+        &-input::-moz-placeholder {
+            color: rgb(158, 158, 158);
+        }
+
+        &-input:-ms-input-placeholder {
+            color: rgb(158, 158, 158);
+        }
+
+        &-input::-ms-input-placeholder {
+            color: rgb(158, 158, 158);
+        }
+
+        &-input::placeholder {
+            color: rgb(158, 158, 158);
+        }
+
+        &-input:placeholder-shown+&-label {
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-4rem);
+        }
+
+        // radio
+
+        &-group-radio {
+            width: 49%;
+            display: inline-block;
+
+            .form-radio {
+                display: none;
+            }
+
+            .form-radio:checked~.form-custom-radio::after {
+                opacity: 1;
+            }
+
+            .form-radio-label {
+                margin-left: 1rem;
+                cursor: pointer;
+            }
+
+            .form-custom-radio {
+                width: 3rem;
+                height: 3rem;
+                border: 0.4rem solid $color-primary;
+                background-color: transparent;
+                border-radius: 50%;
+                display: inline-block;
+                position: relative;
+                top: 1rem;
+
+
+
+                &::after {
+                    content: "";
+                    display: inline-block;
+                    position: absolute;
+                    width: 1.3rem;
+                    height: 1.3rem;
+                    border-radius: 50%;
+                    background-color: $color-primary;
+                    top: 50%;
+                    left: 50%;
+                    opacity: 0;
+                    transform: translate(-50%, -50%);
+                    transition: all 0.3s;
+                }
+            }
+        }
+    }
+}

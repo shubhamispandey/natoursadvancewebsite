@@ -7,8 +7,15 @@
     background-size: cover;
     background-position: top;
     background-repeat: no-repeat;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
     clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
     position: relative;
+
+    @include respond(tablet-port) {
+        height: 100vh;
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+    }
 
     &__logo-box {
         position: absolute;
@@ -18,5 +25,23 @@
 
     &__logo {
         height: 3.5rem;
+    }
+
+    @include respond(tablet-port) {
+        &__logo-box {
+            top: 3.5rem;
+            left: 3rem;
+        }
+
+        &__logo {
+            height: 4.5rem;
+        }
+    }
+
+    @media (-webkit-max-device-pixel-ratio: 2) and (max-width: 900px),
+    (max-resolution: 192dpi) and (max-width: 900px) {
+        background-image:
+            linear-gradient(to bottom right, rgba($color-primary-light, 0.8),
+                rgba($color-primary-dark, 0.8)), url(../img/hero-small.jpg);
     }
 }

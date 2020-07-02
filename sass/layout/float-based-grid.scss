@@ -1,12 +1,24 @@
-
 .row {
 
     max-width: $grid-width;
     margin: 0 auto;
-    font-size: $default-font-size;
+
+    @include respond(tablet-land) {
+        max-width: $grid-tablet-width;
+        padding: 3rem;
+    }
+
+    @include respond(tablet-port) {
+        max-width: 60rem;
+        padding: 2rem;
+    }
 
     &:not(:last-child) {
         margin-bottom: $gutter-vertical;
+
+        @include respond(tablet-land) {
+            margin-bottom: $gutter-tablet-vertical;
+        }
     }
 
     @include clearfix;
@@ -16,12 +28,22 @@
 
         &:not(:last-child) {
             margin-right: $gutter-horizontal;
+
+            @include respond(tablet-port) {
+                margin-right: 0;
+                margin-bottom: $gutter-tablet-vertical;
+            }
+        }
+
+        @include respond(tablet-port) {
+            float: none;
+            width: 100% !important;
         }
     }
 
-    .col-1-of-2{
+    .col-1-of-2 {
         width: calc((100% - #{$gutter-horizontal}) / 2);
-    
+
     }
 
     .col-1-of-3 {
@@ -45,4 +67,3 @@
     }
 
 }
-
