@@ -1053,7 +1053,7 @@ input:checked ~ .menu-toggle__btn span::after {
   position: relative; }
   @media (max-width: 56.25em) {
     .header {
-      height: 90vh;
+      height: 94vh;
       -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
       clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%); } }
   .header__logo-box {
