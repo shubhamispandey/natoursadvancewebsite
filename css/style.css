@@ -380,6 +380,13 @@ input:checked ~ .menu-toggle__btn span::after {
   .composition:hover .composition__photo:not(:hover) {
     transform: scale(0.95); }
 
+.composition {
+  opacity: 0;
+  animation: 2s; }
+
+.composition.animate__fadeInRight {
+  opacity: 1; }
+
 .card {
   height: 52rem;
   position: relative;
@@ -507,6 +514,13 @@ input:checked ~ .menu-toggle__btn span::after {
           .card__back .container .container__btn {
             margin-top: 0; } }
 
+.card {
+  opacity: 0;
+  animation-duration: 2s; }
+
+.card.fadeIn {
+  opacity: 1; }
+
 .btn, .btn:link, .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
@@ -617,6 +631,13 @@ input:checked ~ .menu-toggle__btn span::after {
         background-clip: text; } }
   .feature-box:hover {
     transform: scale(1.03) translateY(-2rem); }
+
+.feature-box {
+  opacity: 0;
+  animation-duration: 2s; }
+
+.feature-box.animate__fadeInUp {
+  opacity: 1; }
 
 .story {
   background-color: rgba(255, 255, 255, 0.8);
