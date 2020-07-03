@@ -1,17 +1,28 @@
 $(document).ready(function() {
 
+  /* ---------------------------------------------for stycky nav bar------------------------------------------------- */
+
+  $('.js-nav').waypoint(function(direction) {
+    if( direction == "down" )
+    {
+      $('.nav-bar').addClass('sticky');
+    }
+    else
+    {
+      $('.nav-bar').removeClass('sticky');
+    }
+  },{
+    offset: '90px'
+  });
+
 
   /* ------------------------------------scroll on buttons --------------------------------------------------------------*/
-  $('.js-scroll-to-tours').click(function() {
-    $('html, body').animate({scrollTop: $('.js-section-tours').offset().top}, 1000);
+  $('.js-scroll-to-plans').click(function() {
+    $('html, body').animate({scrollTop: $('.js-section-plans').offset().top}, 1000);
   });
 
-  $('.js-scroll-btn-learn-a').click(function() {
-    $('html,body').animate({ scrollTop: $('.js-section-features').offset().top}, 1000);
-  });
-
-  $('.js-scroll-btn-learn-b').click(function () {
-    $('html,body').animate({ scrollTop: $('.section-stories').offset().top }, 1000);
+  $('.js-scroll-to-start').click(function() {
+    $('html,body').animate({scrollTop: $('.js-nav').offset().top}, 1000);
   });
 
 /* ------------------------------------scroll on nav links --------------------------------------------------------------*/
