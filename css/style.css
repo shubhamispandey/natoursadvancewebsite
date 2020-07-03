@@ -1219,7 +1219,7 @@ input:checked ~ .menu-toggle__btn span::after {
       padding: 30rem 0 25rem; } }
   @media (max-width: 37.5em) {
     .section-about {
-      padding: 20rem 0 25rem; }
+      padding: 22rem 0 26rem; }
       .section-about .u-center {
         margin-bottom: 4rem; } }
 
