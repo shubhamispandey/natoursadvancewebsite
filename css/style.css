@@ -1053,7 +1053,7 @@ input:checked ~ .menu-toggle__btn span::after {
   position: relative; }
   @media (max-width: 56.25em) {
     .header {
-      height: 94.5vh;
+      height: 94.2vh;
       -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
       clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%); } }
   .header__logo-box {
@@ -1236,7 +1236,7 @@ input:checked ~ .menu-toggle__btn span::after {
     transform: skewY(8deg); }
   @media (max-width: 37.5em) {
     .section-features {
-      padding: 10rem 0; } }
+      padding: 12rem 0; } }
   @media (-webkit-max-device-pixel-ratio: 2) and (max-width: 900px), (max-resolution: 192dpi) and (max-width: 900px) {
     .section-features {
       background-image: linear-gradient(to bottom right, rgba(126, 213, 111, 0.8), rgba(17, 202, 140, 0.8)), url(../img/nat-4-small.jpg); } }
