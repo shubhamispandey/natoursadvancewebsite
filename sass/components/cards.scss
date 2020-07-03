@@ -218,3 +218,11 @@
     }
 
 }
+
+.card{
+    opacity: 0;
+    animation-duration: 2s;
+}
+.card.fadeIn{
+    opacity: 1;
+}

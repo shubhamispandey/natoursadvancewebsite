@@ -12,7 +12,7 @@
     position: relative;
 
     @include respond(tablet-port) {
-        height: 100vh;
+        height: 94vh;
         -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
         clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
     }

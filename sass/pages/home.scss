@@ -87,7 +87,7 @@
 
 
     @include respond(phone) {
-        padding: 20rem 0 25rem;
+        padding: 22rem 0 26rem;
 
         .u-center {
             margin-bottom: 4rem;
@@ -116,7 +116,7 @@
     }
 
     @include respond(phone) {
-        padding: 10rem 0;
+        padding: 12rem 0;
     }
 
     @media (-webkit-max-device-pixel-ratio: 2) and (max-width: 900px),

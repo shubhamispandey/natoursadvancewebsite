@@ -26,3 +26,11 @@
     }
 
 }
+
+.feature-box{
+    opacity: 0;
+    animation-duration: 2s;
+}
+.feature-box.animate__fadeInUp{
+    opacity: 1;
+}
