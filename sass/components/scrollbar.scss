@@ -1,0 +1,14 @@
+body::-webkit-scrollbar{
+    width: 1.5rem;
+    padding-top: 5rem;
+
+    &-track {
+        background: $color-light-grey-2;
+    }
+
+    &-thumb {
+        background: linear-gradient($color-primary-light, $color-primary-dark);
+        border-radius: 3rem;
+    }
+    
+}
